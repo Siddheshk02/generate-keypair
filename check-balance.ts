@@ -1,11 +1,11 @@
 import { Connection, LAMPORTS_PER_SOL, PublicKey } from "@solana/web3.js";
 
-const publicKey = new PublicKey("DaWV8GdRGvL4SFoRGmpbADoppvmsxPz8uEUr6xfmxdf4");
+const publicKey = new PublicKey("the-public-key");
 
 if (!PublicKey.isOnCurve(publicKey.toBytes())) {
     console.log("Invalid wallet address!!");
 } else {
-    const connection = new Connection("https://api.devnet.solana.com", "confirmed");
+    const connection = new Connection("https://api.mainnet-beta.solana.com", "confirmed");
 
     const balanceInLamports = await connection.getBalance(publicKey);
 
